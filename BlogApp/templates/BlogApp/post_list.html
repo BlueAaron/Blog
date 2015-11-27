@@ -1,0 +1,6 @@
+{% extends 'BlogApp/base.html' %}
+{% block content %}
+            {% for post in posts %}
+            <h1><a href="{% url 'BlogApp.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            {% endfor %}
+{% endblock content %}

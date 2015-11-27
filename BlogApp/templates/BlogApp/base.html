@@ -1,0 +1,46 @@
+﻿{% load staticfiles %}<html>
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/static/css/blog.css" rel="stylesheet" type="text/css" />
+    <title>小白博客</title>
+</head>
+<body>
+<div class="top">
+    <div class="logo"><img src="/static/images/logo.png" /></div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">下载</a></li>
+            <li><a href="#">收藏</a></li>
+            <li><a href="#">联系</a></li>
+        </ul>
+    </div>
+    <div class="search">
+        <form action="/index/search" name="search-form" method="get">
+            <input type="text" placeholder="搜索问题" autocomplete="off" name="words" value="" />
+        </form>
+    </div>
+    <a href="{% url 'BlogApp.views.post_new' %}" class="login"><span class="glyphicon glyphicon-plus"></span></a>
+</div>
+<div class="bloglist">
+{% block content %}
+{% endblock %}
+</div>
+<div class="listright">
+    <div class="newblog">
+        这里是新的博客列表
+    </div>
+    <div class="newanswer">
+        这里是最新回复列表
+    </div>
+    <div class="hotblog">
+        这里是最热博客列表
+    </div>
+</div>
+</body>
+</html>

@@ -10,7 +10,8 @@ font-size:12px;
 /*设置超链接*/
 a:link, a:visited{ color: #FFFFFF;
 text-decoration:none;}
-a:hover { color:#FF6666;}
+a:hover { color:#2F49CE;
+margin-top: 2px;}
 a:active { color: #666;}
 
 .top {
